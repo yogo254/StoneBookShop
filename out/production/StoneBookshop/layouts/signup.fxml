@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<HBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="484.0" prefWidth="656.0" style="-fx-background-color: #2B475E;" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controler.SignupController">
+   <children>
+      <Pane prefHeight="462.0" prefWidth="88.0" />
+      <VBox prefHeight="473.0" prefWidth="569.0" spacing="15.0">
+         <children>
+            <Label prefHeight="16.0" prefWidth="347.0" style="-fx-font-weight: bold;" text="Sign up for new Account" textFill="#f5f2f2">
+               <font>
+                  <Font size="22.0" />
+               </font>
+            </Label>
+            <TextField fx:id="firstname" promptText="firstname" />
+            <TextField fx:id="lastname" promptText="lastname" />
+            <TextField fx:id="username" promptText="username" />
+            <TextField fx:id="email" promptText="email" />
+            <HBox prefHeight="46.0" prefWidth="567.0" spacing="200.0">
+               <children>
+                  <RadioButton fx:id="male" mnemonicParsing="false" selected="true" text="male" textFill="#f5f3f3">
+                     <padding>
+                        <Insets left="50.0" />
+                     </padding>
+                     <toggleGroup>
+                        <ToggleGroup fx:id="gender" />
+                     </toggleGroup>
+                  </RadioButton>
+                  <RadioButton fx:id="fmale" mnemonicParsing="false" text="female" textFill="#f2efef" toggleGroup="$gender" />
+               </children>
+            </HBox>
+            <HBox prefHeight="46.0" prefWidth="567.0" spacing="20.0">
+               <children>
+                  <Label text="Birthday" textFill="#eeeaea" />
+                  <DatePicker fx:id="date_of_birth" prefHeight="26.0" prefWidth="373.0" />
+               </children>
+            </HBox>
+            <VBox prefHeight="83.0" prefWidth="567.0" spacing="10.0">
+               <children>
+                  <Label text="Password:" textFill="#fcf8f8" />
+                  <PasswordField fx:id="password" />
+                  <PasswordField fx:id="confirmpassword" />
+               </children>
+            </VBox>
+            <Button fx:id="signup" mnemonicParsing="false" onAction="#singupAction" style="-fx-background-color: #2B475E; -fx-border-radius: 10; -fx-border-color: #F3F3F3;" text="Sign Up" textFill="#fcf9f9">
+               <VBox.margin>
+                  <Insets left="200.0" />
+               </VBox.margin>
+            </Button>
+         </children>
+      </VBox>
+   </children>
+</HBox>
